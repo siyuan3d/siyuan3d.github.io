@@ -7,7 +7,6 @@
 这个是一个自己的主动网站`website`
 > 这个网站包含了很多有趣的\
 > 内容
-> 
 ### Python代码
 ```python
 import numpy as np
