@@ -1,27 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>示例 HTML 文件</title>
-    <style>
-        /* CSS 样式可以放在这里 */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #666;
-        }
-    </style>
+  <title>显示代码示例</title>
+  <style>
+    /* 自定义样式（可选） */
+    pre {
+      background-color: #f4f4f4;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+  </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>这是一个示例 HTML 文件。</p>
-    <h2>这又是一个标题</h2>
-    <p>这是另外一个标题</p>
+
+<pre id="codeBlock" data-language="javascript">
+<code>
+// JavaScript示例代码
+function greet() {
+    console.log("Hello, World!");
+}
+
+greet(); // 调用函数
+</code>
+</pre>
+
+<button onclick="copyCode()">复制代码</button>
+
+<script>
+  function copyCode() {
+    const codeBlock = document.getElementById('codeBlock');
+    const codeText = codeBlock.innerText;
+    
+    // 创建一个文本区域元素，将代码文本赋值给它
+    const textArea = document.createElement('textarea');
+    textArea.value = codeText;
+    document.body.appendChild(textArea);
+    
+    // 选择并复制文本
+    textArea.select();
+    document.execCommand('copy');
+    
+    // 移除文本区域元素
+    document.body.removeChild(textArea);
+    
+    alert('代码已复制！');
+  }
+</script>
+
 </body>
 </html>
