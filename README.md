@@ -10,6 +10,7 @@
 ### Python代码
 ```python
 import numpy as np
-a = np.zeroz((3,3), np.uint8)
+a = np.zero((3,3), np.uint8)
 print(a)
 ```
+### 布局（Layout）
